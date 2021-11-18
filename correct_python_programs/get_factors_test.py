@@ -1,4 +1,4 @@
-from get_factors import get_factors
+from .get_factors import get_factors
 
 def main():
     assert get_factors(1) == []

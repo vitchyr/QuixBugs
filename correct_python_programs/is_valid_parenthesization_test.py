@@ -1,4 +1,4 @@
-from is_valid_parenthesization import is_valid_parenthesization
+from .is_valid_parenthesization import is_valid_parenthesization
 
 def main():
     assert is_valid_parenthesization('((()()))()')

@@ -1,4 +1,4 @@
-from kth import kth
+from .kth import kth
 
 def main():
     assert kth([1, 2, 3, 4, 5], 0) == 1

@@ -1,4 +1,4 @@
-from kheapsort import kheapsort
+from .kheapsort import kheapsort
 
 def main():
     assert list(kheapsort([3, 2, 1, 5, 4], 2)) == [1, 2, 3, 4, 5]

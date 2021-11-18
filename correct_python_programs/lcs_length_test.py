@@ -1,4 +1,4 @@
-from lcs_length import lcs_length
+from .lcs_length import lcs_length
 
 def main():
     assert lcs_length('witch', 'sandwich') == 2

@@ -1,4 +1,4 @@
-from levenshtein import levenshtein
+from .levenshtein import levenshtein
 
 def main():
     assert levenshtein('electron', 'neutron') == 3

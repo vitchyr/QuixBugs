@@ -1,4 +1,4 @@
-from longest_common_subsequence import longest_common_subsequence
+from .longest_common_subsequence import longest_common_subsequence
 
 def main():
     assert longest_common_subsequence('headache', 'pentadactyl') == 'eadac'

@@ -1,4 +1,4 @@
-from knapsack import knapsack
+from .knapsack import knapsack
 
 def main():
     assert knapsack(100, [(60, 10), (50, 8), (20, 4), (20, 4), (8, 3), (3, 2)]) == 19

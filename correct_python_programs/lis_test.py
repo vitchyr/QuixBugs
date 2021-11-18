@@ -1,4 +1,4 @@
-from lis import lis
+from .lis import lis
 
 def main():
     assert lis([4, 1, 5, 3, 7, 6, 2]) == 3
