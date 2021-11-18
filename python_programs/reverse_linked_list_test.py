@@ -2,10 +2,7 @@ from .node import Node
 from .reverse_linked_list import reverse_linked_list
 
 
-"""
-Driver to test reverse linked list
-"""
-def main():
+def test_main():
     # Case 1: 5-node list input
     # Expected Output: 1 2 3 4 5
     node1 = Node(1)
@@ -16,42 +13,28 @@ def main():
 
     result = reverse_linked_list(node5)
 
-    if result == node1:
-        print("Reversed!", end=" ")
-    else:
-        print("Not Reversed!", end=" ")
+    full_results = []
     while result:
-        print(result.value, end=" ")
+        full_results.append(result.value)
         result = result.successor
-    print()
+    assert full_results == [1, 2, 3, 4, 5]
 
     # Case 2: 1-node list input
     # Expected Output: 0
     node = Node(0)
     result = reverse_linked_list(node)
 
-    if result == node:
-        print("Reversed!", end=" ")
-    else:
-        print("Not Reversed!", end=" ")
+    full_results = []
     while result:
-        print(result.value, end=" ")
+        full_results.append(result.value)
         result = result.successor
-    print()
+    assert full_results == [0]
 
     # Case 3: None input
     # Expected Output: None
     result = reverse_linked_list(None)
-    if result == None:
-        print("Reversed!", end=" ")
-    else:
-        print("Not Reversed!", end=" ")
+    assert result == None
 
-    while result:
-        print(result.value)
-        result = result.successor
-    print()
 
 if __name__ == "__main__":
-    main()
-
+    test_main()

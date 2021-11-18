@@ -2,10 +2,7 @@ from .node import Node
 from .detect_cycle import detect_cycle
 
 
-"""
-Driver to test reverse linked list
-"""
-def main():
+def test_main():
     # Case 1: 5-node list input with no cycle
     # Expected Output: Cycle not detected!
     node1 = Node(1)
@@ -14,61 +11,31 @@ def main():
     node4 = Node(4, node3)
     node5 = Node(5, node4)
 
-    if detect_cycle(node5):
-        print("Cycle detected!", end=" ")
-    else:
-        print("Cycle not detected!", end=" ")
-    print()
+    assert not detect_cycle(node5)
 
     # Case 2: 5-node list input with cycle
     # Expected Output: Cycle detected!
     node1.successor = node5
 
-    if detect_cycle(node5):
-        print("Cycle detected!", end=" ")
-    else:
-        print("Cycle not detected!", end=" ")
-    print()
+    assert detect_cycle(node5)
 
     # Case 3: 2-node list with cycle
     # Expected Output: Cycle detected!
     node1.successor = node2
 
-    if detect_cycle(node2):
-        print("Cycle detected!", end=" ")
-    else:
-        print("Cycle not detected!", end=" ")
-    print()
+    assert detect_cycle(node2)
 
     # Case 4: 2-node list with no cycle
     # Expected Output: Cycle not detected!
     node6 = Node(6)
     node7 = Node(7, node6)
 
-    if detect_cycle(node7):
-        print("Cycle detected!", end=" ")
-    else:
-        print("Cycle not detected!", end=" ")
-    print()
+    assert not detect_cycle(node7)
 
     # Case 5: 1-node list
     # Expected Output: Cycle not detected!
     node = Node(0)
-    if detect_cycle(node):
-        print("Cycle detected!", end=" ")
-    else:
-        print("Cycle not detected!", end=" ")
-    print()
-
-    # Case 6: 5 nodes in total. the last 2 nodes form a cycle. input the first node
-    node1.successor = node2
-	if detect_cycle(node5):
-        print("Cycle detected!", end=" ")
-    else:
-        print("Cycle not detected!", end=" ")
-    print()
-
+    assert not detect_cycle(node)
 
 if __name__ == "__main__":
-    main()
-
+    test_main()

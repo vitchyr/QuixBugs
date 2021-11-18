@@ -2,10 +2,7 @@ from .node import Node
 from .topological_ordering import topological_ordering
 
 
-"""
-Driver to test topological ordering
-"""
-def main():
+def test_main():
     # Case 1: Wikipedia graph
     # Output: 5 7 3 11 8 10 2 9
     
@@ -29,11 +26,8 @@ def main():
     nine.incoming_nodes = [eleven, eight]
     ten.incoming_nodes = [eleven, three]
 
-    try:
-        [print(x.value, end=" ") for x in topological_ordering([five, seven, three, eleven, eight, two, nine, ten])]
-    except Exception as e:
-        print(e)
-    print()
+    results = [x.value for x in topological_ordering([five, seven, three, eleven, eight, two, nine, ten])]
+    assert results == [5, 7, 3, 11, 8, 10, 2, 9]
 
 
     # Case 2: GeekforGeeks example
@@ -55,12 +49,8 @@ def main():
     three.incoming_nodes = [two]
     three.outgoing_nodes = [one]
 
-    try:
-        [print(x.value, end=" ") for x in topological_ordering([zero, one, two, three, four, five])]
-    except Exception as e:
-        print(e)
-    print()
-    
+    results = [x.value for x in topological_ordering([zero, one, two, three, four, five])]
+    assert results == [4, 5, 0, 2, 3, 1]
 
     # Case 3: Cooking with InteractivePython
     # Output:
@@ -89,12 +79,19 @@ def main():
     syrup.outgoing_nodes = [eat]
     eat.incoming_nodes = [syrup, turn]
 
-    try:
-        [print(x.value, end=" ") for x in topological_ordering([milk, egg, oil, mix, syrup, griddle, pour, turn, eat])]
-    except Exception as e:
-        print(e)
-    print()
+    results = [x.value for x in topological_ordering([milk, egg, oil, mix, syrup, griddle, pour, turn, eat])]
+    assert results == [
+       '3/4 cup milk',
+       '1 egg',
+       '1 Tbl oil',
+       'heat griddle',
+       '1 cup mix',
+       'pour 1/4 cup',
+       'heat syrup',
+       'turn when bubbly',
+       'eat',
+    ]
 
 
 if __name__ == "__main__":
-    main()
+    test_main()
