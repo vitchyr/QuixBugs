@@ -37,5 +37,6 @@ def test_main():
     node = Node(0)
     assert not detect_cycle(node)
 
+
 if __name__ == "__main__":
     test_main()
