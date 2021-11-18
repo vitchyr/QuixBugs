@@ -5,7 +5,7 @@ from .topological_ordering import topological_ordering
 def test_main():
     # Case 1: Wikipedia graph
     # Output: 5 7 3 11 8 10 2 9
-    
+
     five = Node(5)
     seven = Node(7)
     three = Node(3)
@@ -28,7 +28,6 @@ def test_main():
 
     results = [x.value for x in topological_ordering([five, seven, three, eleven, eight, two, nine, ten])]
     assert results == [5, 7, 3, 11, 8, 10, 2, 9]
-
 
     # Case 2: GeekforGeeks example
     # Output: 4 5 0 2 3 1
@@ -81,15 +80,15 @@ def test_main():
 
     results = [x.value for x in topological_ordering([milk, egg, oil, mix, syrup, griddle, pour, turn, eat])]
     assert results == [
-       '3/4 cup milk',
-       '1 egg',
-       '1 Tbl oil',
-       'heat griddle',
-       '1 cup mix',
-       'pour 1/4 cup',
-       'heat syrup',
-       'turn when bubbly',
-       'eat',
+        '3/4 cup milk',
+        '1 egg',
+        '1 Tbl oil',
+        'heat griddle',
+        '1 cup mix',
+        'pour 1/4 cup',
+        'heat syrup',
+        'turn when bubbly',
+        'eat',
     ]
 
 
