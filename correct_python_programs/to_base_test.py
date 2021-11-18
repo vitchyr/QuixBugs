@@ -1,7 +1,7 @@
 from .to_base import to_base
 
 
-def main():
+def test_main():
     assert to_base(31, 2) == '11111'
     assert to_base(32, 2) == '100000'
     assert to_base(32, 4) == '200'
@@ -11,5 +11,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()
 

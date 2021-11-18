@@ -1,7 +1,7 @@
 from .minimum_spanning_tree import minimum_spanning_tree
 
 
-def main():
+def test_main():
     # Case 1: Simple tree input.
     # Output: (1, 2) (3, 4) (1, 4)
     result = minimum_spanning_tree({
@@ -36,4 +36,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()

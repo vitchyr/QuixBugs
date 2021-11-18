@@ -2,7 +2,7 @@ from .node import Node
 from .breadth_first_search import breadth_first_search
 
 
-def main():
+def test_main():
     # Case 1: Strongly connected graph
     # Output: Path found!
     station1 = Node("Westminster")
@@ -46,4 +46,4 @@ def main():
     assert breadth_first_search(node6, node1)
 
 if __name__ == "__main__":
-    main()
+    test_main()

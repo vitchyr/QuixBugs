@@ -2,7 +2,7 @@ from .node import Node
 from .detect_cycle import detect_cycle
 
 
-def main():
+def test_main():
     # Case 1: 5-node list input with no cycle
     # Expected Output: Cycle not detected!
     node1 = Node(1)
@@ -38,4 +38,4 @@ def main():
     assert not detect_cycle(node)
 
 if __name__ == "__main__":
-    main()
+    test_main()

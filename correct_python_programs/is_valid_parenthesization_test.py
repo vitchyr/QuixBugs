@@ -1,7 +1,7 @@
 from .is_valid_parenthesization import is_valid_parenthesization
 
 
-def main():
+def test_main():
     assert is_valid_parenthesization('((()()))()')
     assert is_valid_parenthesization('()')
     assert is_valid_parenthesization('')
@@ -11,4 +11,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()

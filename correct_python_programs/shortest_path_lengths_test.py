@@ -1,7 +1,7 @@
 from .shortest_path_lengths import shortest_path_lengths
 
 
-def main():
+def test_main():
     inf = float('inf')
 
     # Case 1: Basic graph input.
@@ -151,4 +151,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()

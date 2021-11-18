@@ -1,8 +1,8 @@
-from node import Node
-from topological_ordering import topological_ordering
+from .node import Node
+from .topological_ordering import topological_ordering
 
 
-def main():
+def test_main():
     # Case 1: Wikipedia graph
     # Output: 5 7 3 11 8 10 2 9
     
@@ -94,5 +94,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-
+    test_main()

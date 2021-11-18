@@ -1,7 +1,7 @@
 from .lis import lis
 
 
-def main():
+def test_main():
     assert lis([4, 1, 5, 3, 7, 6, 2]) == 3
     assert lis([1, 1, 1, 1]) == 1
     assert lis([]) == 0
@@ -10,4 +10,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()

@@ -2,7 +2,7 @@ from .node import Node
 from .shortest_path_length import shortest_path_length
 
 
-def main():
+def test_main():
     node1 = Node("1")
     node5 = Node("5")
     node4 = Node("4", None, [node5])
@@ -42,4 +42,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()

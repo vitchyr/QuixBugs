@@ -1,7 +1,7 @@
 from .longest_common_subsequence import longest_common_subsequence
 
 
-def main():
+def test_main():
     assert longest_common_subsequence('headache', 'pentadactyl') == 'eadac'
     assert longest_common_subsequence('', 'pentadactyl') == ''
     assert longest_common_subsequence('a', 'aaa') == 'a'
@@ -11,4 +11,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()

@@ -1,7 +1,7 @@
 from .sqrt import sqrt
 
 
-def main():
+def test_main():
     assert sqrt(2, 0.01) == 1.4166666666666665
     assert sqrt(3, 0.001) == 1.7321428571428572
     assert sqrt(4, 0) == 2.0
@@ -12,5 +12,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()
 

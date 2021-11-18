@@ -1,7 +1,7 @@
 from .quicksort import quicksort
 
 
-def main():
+def test_main():
     assert quicksort([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
     assert quicksort([5, 2, 3, 4, 1]) == [1, 2, 3, 4, 5]
     assert quicksort([3, 2, 5, 4, 1]) == [1, 2, 3, 4, 5]
@@ -10,4 +10,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()

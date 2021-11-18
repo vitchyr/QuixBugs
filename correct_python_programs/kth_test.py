@@ -1,7 +1,7 @@
 from .kth import kth
 
 
-def main():
+def test_main():
     assert kth([1, 2, 3, 4, 5], 0) == 1
     assert kth([5, 4, 3, 2, 1], 0) == 1
     assert kth([2, 3, 4, 5], 0) == 2
@@ -16,4 +16,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()

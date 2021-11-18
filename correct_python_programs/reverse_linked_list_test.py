@@ -2,7 +2,7 @@ from .node import Node
 from .reverse_linked_list import reverse_linked_list
 
 
-def main():
+def test_main():
     # Case 1: 5-node list input
     # Expected Output: 1 2 3 4 5
     node1 = Node(1)
@@ -37,4 +37,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()

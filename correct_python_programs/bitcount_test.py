@@ -1,10 +1,10 @@
 from .bitcount import bitcount
 
 
-def main():
+def test_main():
     assert bitcount(127) == 7
     assert bitcount(128) == 1
 
 
 if __name__ == "__main__":
-    main()
+    test_main()

@@ -1,7 +1,7 @@
 from .find_in_sorted import find_in_sorted
 
 
-def main():
+def test_main():
     for lst, value in [
         ([3, 4, 5, 5, 5, 5, 6], 5),
         ([4, 5, 6], 5),
@@ -16,4 +16,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()

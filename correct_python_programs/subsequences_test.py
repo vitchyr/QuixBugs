@@ -1,7 +1,7 @@
 from .subsequences import subsequences
 
 
-def main():
+def test_main():
     assert subsequences(a=-1, b=3, k=3) == [[-1, 0, 1], [-1, 0, 2], [-1, 1, 2], [0, 1, 2]]
     assert subsequences(a=-1, b=3, k=4) == [[-1, 0, 1, 2]]
     assert subsequences(a=4, b=3, k=4) == []
@@ -11,5 +11,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()
 

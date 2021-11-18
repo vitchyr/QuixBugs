@@ -2,7 +2,7 @@ from .node import Node
 from .depth_first_search import depth_first_search
 
 
-def main():
+def test_main():
     # Case 1: Strongly connected graph
     # Output: Path found!
     station1 = Node("Westminster")
@@ -39,4 +39,4 @@ def main():
     assert depth_first_search(nodea, nodef)
 
 if __name__ == "__main__":
-    main()
+    test_main()

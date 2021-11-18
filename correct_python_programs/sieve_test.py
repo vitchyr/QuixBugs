@@ -1,7 +1,7 @@
 from .sieve import sieve
 
 
-def main():
+def test_main():
     assert sieve(3) == [2, 3]
     assert sieve(4) == [2, 3]
     assert sieve(20) == [2, 3, 5, 7, 11, 13, 17, 19]
@@ -10,5 +10,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_main()
 
