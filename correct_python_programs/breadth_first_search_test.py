@@ -2,9 +2,6 @@ from .node import Node
 from .breadth_first_search import breadth_first_search
 
 
-"""
-Driver to test breadth first search
-"""
 def main():
     # Case 1: Strongly connected graph
     # Output: Path found!
@@ -46,7 +43,6 @@ def main():
     node6 = Node("6", None, [node5, node4, node3])
 
     node2.successors = [node6]
-
     assert breadth_first_search(node6, node1)
 
 if __name__ == "__main__":

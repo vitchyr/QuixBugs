@@ -1,5 +1,6 @@
 from .wrap import wrap
 
+
 def main():
     assert wrap('abcdefgh', 2) == ['ab', 'cd', 'ef', 'gh']
     assert wrap('abcdefghi', 2) == ['ab', 'cd', 'ef', 'gh', 'i']
@@ -7,6 +8,7 @@ def main():
     assert wrap('abcdefghi', 13) == ['abcdefghi']
     assert wrap('abcdefghi', 9) == ['abcdefghi']
     assert wrap('abcdefghi', 8) == ['abcdefgh', 'i']
+
 
 if __name__ == "__main__":
     main()

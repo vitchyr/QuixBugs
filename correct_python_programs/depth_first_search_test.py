@@ -2,9 +2,6 @@ from .node import Node
 from .depth_first_search import depth_first_search
 
 
-"""
-Driver to test depth first search
-"""
 def main():
     # Case 1: Strongly connected graph
     # Output: Path found!
@@ -15,11 +12,7 @@ def main():
     station5 = Node("London Bridge",  None, [station4, station3])
     station6 = Node("Tottenham Court Road",  None, [station5, station4])
 
-    if depth_first_search(station6, station1):
-        print("Path found!", end=" ")
-    else:
-        print("Path not found!", end=" ")
-    print()
+    assert depth_first_search(station6, station1)
 
     # Case 2: Branching graph
     # Output: Path found!
@@ -30,37 +23,20 @@ def main():
     nodeb =  Node("B", None, [nodee])
     nodea =  Node("A", None, [nodeb, nodec, noded])
 
-    if depth_first_search(nodea, nodee):
-        print("Path found!", end=" ")
-    else:
-        print("Path not found!", end=" ")
-    print()
+    assert  depth_first_search(nodea, nodee)
 
     # Case 3: Two unconnected nodes in graph
     # Output: Path not found
-    if depth_first_search(nodef, nodee):
-        print("Path found!", end=" ")
-    else:
-        print("Path not found!", end=" ")
-    print()
+    assert not depth_first_search(nodef, nodee)
 
     # Case 4: One node graph
     # Output: Path found!
-    if depth_first_search(nodef, nodef):
-        print("Path found!", end=" ")
-    else:
-        print("Path not found!", end=" ")
-    print()
+    assert depth_first_search(nodef, nodef)
 
     # Case 5: Graph with cycles
     # Output: Path found!
     nodee.successors = [nodea]
-
-    if depth_first_search(nodea, nodef):
-        print("Path found!", end=" ")
-    else:
-        print("Path not found!", end=" ")
-    print()
+    assert depth_first_search(nodea, nodef)
 
 if __name__ == "__main__":
     main()

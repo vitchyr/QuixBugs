@@ -1,5 +1,6 @@
 from .lcs_length import lcs_length
 
+
 def main():
     assert lcs_length('witch', 'sandwich') == 2
     assert lcs_length('meow', 'homeowner') == 4
@@ -11,6 +12,7 @@ def main():
     assert lcs_length('aa', 'baab') == 2
     assert lcs_length('ba', 'a') == 1
     assert lcs_length('ab', 'a') == 1
+
 
 if __name__ == "__main__":
     main()

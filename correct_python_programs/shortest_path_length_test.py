@@ -1,13 +1,8 @@
-
 from .node import Node
 from .shortest_path_length import shortest_path_length
 
 
-"""
-Test shortest path length
-"""
 def main():
-
     node1 = Node("1")
     node5 = Node("5")
     node4 = Node("4", None, [node5])
@@ -27,23 +22,24 @@ def main():
 
     # Case 1: One path
     # Output: 4
-    result =  shortest_path_length(length_by_edge, node0, node1)
-    print(result)
+    result = shortest_path_length(length_by_edge, node0, node1)
+    assert result == 4
 
     # Case 2: Multiple path
     # Output: 7
     result = shortest_path_length(length_by_edge, node0, node5)
-    print(result)
+    assert result == 7
 
     # Case 3: Start point is same as end point
     # Output: 0
     result = shortest_path_length(length_by_edge, node2, node2)
-    print(result)
+    assert result == 0
 
     # Case 4: Unreachable path
     # Output: INT_MAX
     result = shortest_path_length(length_by_edge, node1, node5)
-    print(result)
+    assert result == float('inf')
+
 
 if __name__ == "__main__":
-     main()
+    main()
